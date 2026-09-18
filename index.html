@@ -212,7 +212,7 @@
 
   /* ---------- COLLECTION DETAIL (alternating rows) ---------- */
   .coll-row{ display:flex; flex-direction:column; gap:44px; align-items:stretch; }
-  @media (min-width:980px){ .coll-row{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:72px; align-items:center; } }
+  @media (min-width:980px){ .coll-row{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:72px; align-items:start; } }
   .coll-row.flip .coll-media{ order:2; }
   @media (min-width:980px){ .coll-row.flip .coll-media{ order:1; } .coll-row.flip .coll-copy{ order:2; } }
   .coll-media{ width:100%; min-width:0; aspect-ratio:4/5; overflow:hidden; }
