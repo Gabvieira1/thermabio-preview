@@ -199,11 +199,11 @@
   .index-row:hover .go{ color:var(--bronze); border-color:var(--bronze); }
 
   /* ---------- COLLECTION DETAIL (alternating rows) ---------- */
-  .coll-row{ display:grid; gap:44px; grid-template-columns:1fr; align-items:center; }
-  @media (min-width:980px){ .coll-row{ grid-template-columns:1.05fr 0.95fr; gap:72px; } }
+  .coll-row{ display:flex; flex-direction:column; gap:44px; align-items:stretch; }
+  @media (min-width:980px){ .coll-row{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:72px; align-items:center; } }
   .coll-row.flip .coll-media{ order:2; }
   @media (min-width:980px){ .coll-row.flip .coll-media{ order:1; } .coll-row.flip .coll-copy{ order:2; } }
-  .coll-media{ aspect-ratio:4/5; overflow:hidden; }
+  .coll-media{ width:100%; min-width:0; aspect-ratio:4/5; overflow:hidden; }
   .coll-media img{ width:100%; height:100%; object-fit:cover; filter:saturate(1.02) contrast(1.01) sepia(0.02); }
   .coll-media.hybrid-badge{ background:var(--deep); display:flex; align-items:center; justify-content:center; padding:12%; border:1px solid var(--hairline-deep); }
   .coll-media.hybrid-badge img{ width:100%; height:auto; object-fit:contain; filter:none; }
@@ -242,6 +242,14 @@
   .on-deep .specline .c{ color:var(--deep-text-soft); }
   .specline .d{ flex:1; min-width:160px; }
   .specline .p{ width:10ch; flex:none; text-align:right; font-weight:600; }
+  @media (max-width:560px){
+    .spec-head{ display:none; }
+    .specline{ row-gap:6px; column-gap:14px; }
+    .specline .m{ width:auto; flex:1 0 100%; }
+    .specline .c{ width:auto; flex:none; }
+    .specline .d{ min-width:0; flex:1 1 auto; }
+    .specline .p{ width:auto; flex:none; text-align:left; margin-left:auto; }
+  }
 
   .cta-line{ margin-top:34px; }
 
@@ -315,9 +323,9 @@
     position:relative;
     width:min(920px,100%);
     max-height:85vh; max-height:85dvh;
-    overflow-y:auto; -webkit-overflow-scrolling:touch; overscroll-behavior:contain;
+    overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch; overscroll-behavior:contain;
     background:var(--ivory);
-    padding:48px 24px;
+    padding:44px 20px;
     transform:translateY(-14px);
     opacity:0;
     transition:transform .35s ease, opacity .35s ease;
