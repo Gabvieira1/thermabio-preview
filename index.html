@@ -174,7 +174,11 @@
   .hero-content{ position:relative; z-index:2; color:var(--deep-text); padding-block:56px 22px; width:100%; }
   .hero-content .eyebrow{ color:var(--bronze-soft); }
   .hero-title{ font-size:clamp(2.6rem,7vw,5rem); margin-top:18px; max-width:16ch; }
-  .hero-title .sub{ display:block; font-family:'Manrope',sans-serif; font-weight:400; font-size:clamp(1rem,2vw,1.3rem); letter-spacing:0; color:var(--deep-text-soft); margin-top:14px; max-width:38ch; }
+  .hero-title .sub{ display:block; font-family:'Manrope',sans-serif; font-weight:400; font-size:clamp(1rem,2vw,1.3rem); letter-spacing:0; color:var(--deep-text-soft); margin-top:14px; max-width:38ch; text-wrap:balance; }
+  @media (max-width:480px){
+    .hero-title{ font-size:2.9rem; margin-top:16px; }
+    .hero-title .sub{ font-size:1.05rem; line-height:1.5; margin-top:12px; max-width:27ch; }
+  }
   .hero-actions{ display:flex; flex-wrap:wrap; gap:18px; align-items:center; margin-top:38px; }
 
   .hero-nav{ position:relative; z-index:2; display:flex; align-items:center; justify-content:flex-end; gap:18px; padding-block:0 34px; }
@@ -397,7 +401,7 @@
     </div>
     <div class="wrap hero-content">
       <span class="eyebrow">Conceito exclusivo de bem-estar</span>
-      <h1 class="hero-title display-italic">ThermaBio<span class="sub">A evolução da terapia de calor e infravermelho.</span></h1>
+      <h1 class="hero-title display-italic">ThermaBio<span class="sub">A evolução da terapia de&nbsp;calor e infravermelho.</span></h1>
       <div class="hero-actions">
         <a href="#/produtos" class="btn btn-primary">Conheça nossos Produtos</a>
         <a href="#/sobre" class="btn-line" style="font-size:0.82rem; letter-spacing:0.04em;">A Arte da Desaceleração</a>
