@@ -96,11 +96,14 @@
   @media (min-width:900px){ #navlinks{ display:flex; } }
 
   .btn{
-    display:inline-flex; align-items:center; gap:10px;
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
     font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
     font-weight:600; cursor:pointer;
     padding:14px 26px; border-radius:1px; border:1px solid transparent;
-    white-space:nowrap;
+    white-space:nowrap; max-width:100%;
+  }
+  @media (max-width:480px){
+    .btn{ width:100%; white-space:normal; text-align:center; }
   }
   .btn-primary{ background:var(--ink); color:var(--ivory); }
   .btn-primary:hover{ background:var(--bronze); }
