@@ -178,6 +178,11 @@
   .hero-actions{ display:flex; flex-wrap:wrap; gap:18px; align-items:center; margin-top:38px; }
 
   .hero-nav{ position:relative; z-index:2; display:flex; align-items:center; justify-content:flex-end; gap:18px; padding-block:0 34px; }
+  @media (max-width:480px){
+    .hero-content{ padding-block:44px 30px; }
+    .hero-actions{ gap:20px; }
+    .hero-nav{ padding-block:14px 30px; }
+  }
   .hero-arrow{
     width:36px; height:36px; border:1px solid var(--hairline-deep); background:transparent;
     color:var(--deep-text); font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;
