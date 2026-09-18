@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ThermaBio by Cube Wellness — cabines térmicas de infravermelho premium para arquitetura do bem-estar, nas linhas Signature, Nature e Hybrid.">
+<link rel="icon" type="image/png" href="images/logo-icon.png">
 <title>ThermaBio</title>
 <style>
   :root{
@@ -10,8 +12,8 @@
     --ivory-2:#EFE6D2;
     --ink:#1C170E;
     --ink-soft:rgba(28,23,14,0.64);
-    --ink-faint:rgba(28,23,14,0.46);
-    --bronze:#A07836;
+    --ink-faint:rgba(28,23,14,0.62);
+    --bronze:#8A672E;
     --bronze-soft:#CBA467;
     --deep:#15120C;
     --deep-text:#F2E9D8;
@@ -193,12 +195,16 @@
     flex:none; border-radius:1px;
   }
   .hero-arrow:hover{ border-color:var(--bronze-soft); color:var(--bronze-soft); }
-  .hero-dots{ display:flex; gap:9px; }
+  .hero-dots{ display:flex; gap:2px; }
   .hero-dots .dot{
-    width:7px; height:7px; border-radius:50%; border:1px solid var(--deep-text-soft);
+    width:24px; height:24px; border-radius:50%; border:none;
     background:transparent; padding:0; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
   }
-  .hero-dots .dot.active{ background:var(--bronze-soft); border-color:var(--bronze-soft); }
+  .hero-dots .dot::before{
+    content:''; width:7px; height:7px; border-radius:50%; border:1px solid var(--deep-text-soft);
+  }
+  .hero-dots .dot.active::before{ background:var(--bronze-soft); border-color:var(--bronze-soft); }
 
   /* ---------- COLLECTION INDEX ---------- */
   .index-list{ display:flex; flex-direction:column; margin-top:8px; }
@@ -402,9 +408,9 @@
 <main class="page" id="page-home">
   <header class="hero-full" id="hero-carousel">
     <div class="hero-slides">
-      <div class="hero-slide active"><img src="images/hero-nature-piscina.png" alt="Cabine ThermaBio Nature, deck com vista para o mar" style="object-position:center 20%;"></div>
-      <div class="hero-slide"><img src="images/home-hero.webp" alt="Cabine ThermaBio Nature, deck ao entardecer"></div>
-      <div class="hero-slide"><img src="images/hero-signature-lifestyle.webp" alt="Cabine ThermaBio Signature, ambiente em travertino"></div>
+      <div class="hero-slide active"><img src="images/hero-nature-piscina.jpg" alt="Cabine ThermaBio Nature, deck com vista para o mar" style="object-position:center 20%;" fetchpriority="high"></div>
+      <div class="hero-slide"><img data-src="images/home-hero.webp" alt="Cabine ThermaBio Nature, deck ao entardecer"></div>
+      <div class="hero-slide"><img data-src="images/hero-signature-lifestyle.webp" alt="Cabine ThermaBio Signature, ambiente em travertino"></div>
     </div>
     <div class="wrap hero-content">
       <span class="eyebrow">Conceito exclusivo de bem-estar</span>
@@ -444,7 +450,7 @@
   </section>
 
   <footer class="wrap">
-    <div class="fmark"><img src="images/logo-icon.png" alt="Logo Cube Wellness"> © 2026 CUBE Wellness - Todos os direitos reservados.</div>
+    <div class="fmark"><img loading="lazy" src="images/logo-icon.png" alt="Logo Cube Wellness"> © 2026 CUBE Wellness - Todos os direitos reservados.</div>
     <div style="letter-spacing:0.08em; text-transform:uppercase; font-size:0.72rem;">Curitiba, Brasil</div>
     <div style="font-size:0.72rem; color:var(--ink-faint);">Desenvolvido por Agência SEO&sup2;</div>
   </footer>
@@ -494,7 +500,7 @@
       <button type="button" class="modal-close" data-modal-close aria-label="Fechar">×</button>
       <div class="coll-row">
         <div class="coll-media product-shot">
-          <img src="images/signature.jpg" alt="Cabine ThermaBio Signature, porta de vidro aberta">
+          <img loading="lazy" src="images/signature.jpg" alt="Cabine ThermaBio Signature, porta de vidro aberta">
         </div>
         <div class="coll-copy">
           <span class="coll-num">I. Coleção interna</span>
@@ -525,7 +531,7 @@
       <button type="button" class="modal-close" data-modal-close aria-label="Fechar">×</button>
       <div class="coll-row">
         <div class="coll-media product-shot">
-          <img src="images/nature.png" alt="Cabine ThermaBio Nature, formas arredondadas">
+          <img loading="lazy" src="images/nature.jpg" alt="Cabine ThermaBio Nature, formas arredondadas">
         </div>
         <div class="coll-copy">
           <span class="coll-num">II. Coleção externa</span>
@@ -549,9 +555,9 @@
       <div class="coll-row on-deep">
         <div class="coll-media-col">
           <div class="coll-media product-shot">
-            <img src="images/hybrid.png" alt="Cabine ThermaBio Hybrid, sistema híbrido infravermelho e sauna tradicional">
+            <img loading="lazy" src="images/hybrid.jpg" alt="Cabine ThermaBio Hybrid, sistema híbrido infravermelho e sauna tradicional">
             <div class="hybrid-tech-badge">
-              <img src="images/hybrid-badge.png" alt="ThermaBio Hybrid by Cube Wellness">
+              <img loading="lazy" src="images/hybrid-badge.png" alt="ThermaBio Hybrid by Cube Wellness">
             </div>
           </div>
         </div>
@@ -591,7 +597,7 @@
       </div>
       <div class="coll-row reveal" style="margin-top:20px;">
         <div class="coll-media">
-          <img src="images/panel.jpg" alt="Painel touch da cabine ThermaBio, mão ajustando temperatura">
+          <img loading="lazy" src="images/panel.jpg" alt="Painel touch da cabine ThermaBio, mão ajustando temperatura">
         </div>
         <div class="coll-copy" style="max-width:46ch;">
           <div class="num-features" style="margin-top:0;">
@@ -642,7 +648,7 @@
       <div class="human-gallery reveal">
         <figure class="human-card">
           <div class="coll-media">
-            <img src="images/exp-woman.jpg" alt="Mulher relaxando em cabine ThermaBio, olhos fechados">
+            <img loading="lazy" src="images/exp-woman.jpg" alt="Mulher relaxando em cabine ThermaBio, olhos fechados">
           </div>
           <figcaption>
             <h3 style="font-size:1.5rem;">Calor que reorganiza <em>o seu dia.</em></h3>
@@ -651,7 +657,7 @@
         </figure>
         <figure class="human-card">
           <div class="coll-media">
-            <img src="images/exp-man.jpg" alt="Homem observando o pôr do sol ao lado da cabine ThermaBio">
+            <img loading="lazy" src="images/exp-man.jpg" alt="Homem observando o pôr do sol ao lado da cabine ThermaBio">
           </div>
           <figcaption>
             <h3 style="font-size:1.5rem;">Tempo para desacelerar. <em>Tempo para viver.</em></h3>
@@ -663,7 +669,7 @@
   </section>
 
   <footer class="wrap">
-    <div class="fmark"><img src="images/logo-icon.png" alt="Logo Cube Wellness"> © 2026 CUBE Wellness - Todos os direitos reservados.</div>
+    <div class="fmark"><img loading="lazy" src="images/logo-icon.png" alt="Logo Cube Wellness"> © 2026 CUBE Wellness - Todos os direitos reservados.</div>
     <div style="letter-spacing:0.08em; text-transform:uppercase; font-size:0.72rem;">Curitiba, Brasil</div>
     <div style="font-size:0.72rem; color:var(--ink-faint);">Desenvolvido por Agência SEO&sup2;</div>
   </footer>
@@ -711,7 +717,7 @@
   </section>
 
   <footer class="wrap">
-    <div class="fmark"><img src="images/logo-icon.png" alt="Logo Cube Wellness"> © 2026 CUBE Wellness - Todos os direitos reservados.</div>
+    <div class="fmark"><img loading="lazy" src="images/logo-icon.png" alt="Logo Cube Wellness"> © 2026 CUBE Wellness - Todos os direitos reservados.</div>
     <div style="letter-spacing:0.08em; text-transform:uppercase; font-size:0.72rem;">Curitiba, Brasil</div>
     <div style="font-size:0.72rem; color:var(--ink-faint);">Desenvolvido por Agência SEO&sup2;</div>
   </footer>
@@ -761,7 +767,7 @@
   </section>
 
   <footer class="wrap">
-    <div class="fmark"><img src="images/logo-icon.png" alt="Logo Cube Wellness"> © 2026 CUBE Wellness - Todos os direitos reservados.</div>
+    <div class="fmark"><img loading="lazy" src="images/logo-icon.png" alt="Logo Cube Wellness"> © 2026 CUBE Wellness - Todos os direitos reservados.</div>
     <div style="letter-spacing:0.08em; text-transform:uppercase; font-size:0.72rem;">Curitiba, Brasil</div>
     <div style="font-size:0.72rem; color:var(--ink-faint);">Desenvolvido por Agência SEO&sup2;</div>
   </footer>
@@ -842,8 +848,16 @@
     var heroTimer = null;
     var heroReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    function heroLoadSlide(idx){
+      var slide = heroSlides[idx];
+      if(!slide) return;
+      var img = slide.querySelector('img[data-src]');
+      if(img){ img.src = img.getAttribute('data-src'); img.removeAttribute('data-src'); }
+    }
     function heroShow(i){
       heroIdx = (i + heroSlides.length) % heroSlides.length;
+      heroLoadSlide(heroIdx);
+      heroLoadSlide((heroIdx + 1) % heroSlides.length);
       heroSlides.forEach(function(s, j){ s.classList.toggle('active', j === heroIdx); });
       heroDots.forEach(function(d, j){ d.classList.toggle('active', j === heroIdx); });
     }
@@ -859,6 +873,7 @@
     heroEl.addEventListener('mouseenter', function(){ clearInterval(heroTimer); });
     heroEl.addEventListener('mouseleave', heroStart);
     heroStart();
+    setTimeout(function(){ heroLoadSlide(1); }, 1800);
   }
 
   var modals = document.querySelectorAll('.modal-backdrop');
