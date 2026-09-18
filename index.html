@@ -223,10 +223,10 @@
   @media (min-width:980px){ .coll-row.flip .coll-media{ order:1; } .coll-row.flip .coll-copy{ order:2; } }
   .coll-media{ width:100%; min-width:0; aspect-ratio:4/5; overflow:hidden; }
   .coll-media img{ width:100%; height:100%; object-fit:cover; filter:saturate(1.02) contrast(1.01) sepia(0.02); }
-  .coll-media.hybrid-badge{ background:var(--deep); display:flex; align-items:center; justify-content:center; padding:12%; border:1px solid var(--hairline-deep); }
-  .coll-media.hybrid-badge img{ width:100%; height:auto; object-fit:contain; filter:none; }
   .coll-media.product-shot{ position:relative; background:#FBF9F4; display:flex; align-items:center; justify-content:center; padding:8%; border:1px solid var(--hairline); }
   .coll-media.product-shot img{ width:100%; height:100%; object-fit:contain; filter:none; }
+  .coll-media.hybrid-shot{ position:relative; background:#000; display:flex; align-items:center; justify-content:center; }
+  .coll-media.hybrid-shot img{ width:100%; height:100%; object-fit:contain; filter:none; }
   .coll-num{ font-family:'Instrument Serif',serif; font-style:italic; font-size:1.05rem; color:var(--bronze); }
   .on-deep .coll-num{ color:var(--bronze-soft); }
   .coll-copy h2{ font-size:clamp(2rem,4vw,2.9rem); margin-top:8px; }
@@ -244,8 +244,8 @@
   .coll-media-col{ display:flex; flex-direction:column; align-items:flex-start; gap:16px; min-width:0; }
   .coll-media-col .coll-media{ width:100%; }
   .hybrid-tech-badge{
-    position:absolute; left:20px; bottom:20px; z-index:2;
-    width:130px; background:rgba(10,8,5,0.86); padding:8px 12px;
+    position:absolute; left:24px; bottom:24px; z-index:2;
+    width:150px;
   }
   .coll-media .hybrid-tech-badge img{ width:100%; height:auto; display:block; }
   .callout{
@@ -554,7 +554,7 @@
       <button type="button" class="modal-close" data-modal-close aria-label="Fechar">×</button>
       <div class="coll-row on-deep">
         <div class="coll-media-col">
-          <div class="coll-media product-shot">
+          <div class="coll-media hybrid-shot">
             <img loading="lazy" src="images/hybrid.jpg" alt="Cabine ThermaBio Hybrid, sistema híbrido infravermelho e sauna tradicional">
             <div class="hybrid-tech-badge">
               <img loading="lazy" src="images/hybrid-badge.png" alt="ThermaBio Hybrid by Cube Wellness">
